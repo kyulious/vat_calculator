@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부가세, 증감률 계산기</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <h1>VAT & ROC</br>CALCULATOR </h1>
+    <div class="vat">
+        <h4>TOTAL</h4>
+        <input type="text" name="" id="total" placeholder="0">
+        <input type="button" value="CAL" id="btn1">
+        <input type="button" value="DEL" id="btn2">
+        <div class="box1">
+                <h3>Value of Supply (공급가액)</h3>
+                <div id="supply">0</div>
+                <h3>Tax (세액)</h3>
+                <div id="tax">0</div>
+        </div>
+    </div>
+
+    <div class="rate">
+        <h4>Initial Price (최초금액)</h4>
+        <input type="text" name="" id="initial" placeholder="0">
+        <h4>Change Price (변경금액)</h4>
+        <input type="text" name="" id="change" placeholder="0">
+        <input type="button" value="CAL" id="btn3">
+        <input type="button" value="DEL" id="btn4">
+        <div class="box2">
+            <h4>Rate Of Change (증감률)</h4>
+            <div id="changeprice">0%</div>
+        </div>
+        
+    </div>
+</body>
+</html>
