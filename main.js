@@ -78,3 +78,9 @@ btn4.addEventListener("click", function(){
     change.value="";
     changeprice.innerText="0%";
 })
+
+change.addEventListener("keyup", function(e){
+    e.preventDefault();
+    if(e.key === 'Enter' && change.value != ""){
+        changeprice.innerText = `${Math.floor((change.value-initial.value)/initial.value*100)}%`;
+    }})
