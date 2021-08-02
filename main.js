@@ -10,6 +10,7 @@ const change = document.getElementById("change");
 const changeprice = document.getElementById("changeprice");
 const differ = document.getElementById("differ");
 
+//부가세계산
 btn1.addEventListener("mouseover", function(){
     btn1.style.backgroundColor="rgb(53, 144, 156)";
     btn1.style.color="#fff";
@@ -87,3 +88,24 @@ change.addEventListener("keyup", function(e){
         changeprice.innerText = `${Math.floor((change.value-initial.value)/initial.value*10000)/100}%`;
         differ.innerText = `${change.value-initial.value}원`.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     }})
+
+
+//input창 마우스 오버 시 테두리
+total.addEventListener("mouseover", function(){
+    total.style.border="0.2px solid rgb(53, 144, 156)";
+})
+total.addEventListener("mouseout", function(){
+    total.style.border="none";
+})
+initial.addEventListener("mouseover", function(){
+    initial.style.border="0.2px solid rgb(53, 144, 156)";
+})
+initial.addEventListener("mouseout", function(){
+    initial.style.border="none";
+})
+change.addEventListener("mouseover", function(){
+    change.style.border="0.2px solid rgb(53, 144, 156)";
+})
+change.addEventListener("mouseout", function(){
+    change.style.border="none";
+})
