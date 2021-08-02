@@ -8,7 +8,7 @@ const btn4 = document.getElementById("btn4");
 const initial = document.getElementById("initial");
 const change = document.getElementById("change");
 const changeprice = document.getElementById("changeprice");
-
+const differ = document.getElementById("differ");
 
 btn1.addEventListener("mouseover", function(){
     btn1.style.backgroundColor="rgb(53, 144, 156)";
@@ -71,16 +71,19 @@ btn4.addEventListener("mouseout", function(){
 
 btn3. addEventListener("click", function(){
     
-    changeprice.innerText = `${Math.floor((change.value-initial.value)/initial.value*100)}%`;
+    changeprice.innerText = `${Math.floor((change.value-initial.value)/initial.value*10000)/100}%`;
+    differ.innerText = `${change.value-initial.value}원`.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 })
 btn4.addEventListener("click", function(){
     initial.value="";
     change.value="";
     changeprice.innerText="0%";
+    differ.innerText="0";
 })
 
 change.addEventListener("keyup", function(e){
     e.preventDefault();
     if(e.key === 'Enter' && change.value != ""){
-        changeprice.innerText = `${Math.floor((change.value-initial.value)/initial.value*100)}%`;
+        changeprice.innerText = `${Math.floor((change.value-initial.value)/initial.value*10000)/100}%`;
+        differ.innerText = `${change.value-initial.value}원`.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     }})
